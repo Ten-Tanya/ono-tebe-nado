@@ -221,8 +221,6 @@
     text-decoration-line: underline;
     text-transform: uppercase;
     padding-top: 48px;
-
-
 }
 
 .card-text {
@@ -246,7 +244,6 @@
     position: relative;
     background-size: contain;
     z-index: -2;
-    
 }
 
 .card_type_picture {
@@ -389,8 +386,4 @@
 
 .footer_social-icon {
     height: 48px;
-}
-
-* {
-    outline: 1px solid red;
 }
