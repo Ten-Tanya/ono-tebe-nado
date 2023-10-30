@@ -1,3 +1,7 @@
+header, main, footer {
+    max-width: 1440px;
+    margin: 0px auto;
+}
 
 .header {
     width: 1340px;
@@ -5,10 +9,9 @@
     grid-template-columns: repeat(3,1fr);
     justify-content:space-between;
     align-items: center;
-    margin:92px 49px 92px 51px;
+    margin:92px auto;
     background-color: #FFF;
 }
-
 
 .header_menu {
  grid-column: 1/2;
@@ -78,13 +81,12 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    z-index: -2;
 }
 .overlay {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     inset: 0;
     background-color: rgb(0, 0, 0, 1);
     opacity: 60%;
@@ -93,6 +95,8 @@
 .cover_title {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
     color: #FFF;
     font-size: 100px;
     font-weight: 700;
@@ -137,6 +141,8 @@
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
+    position: relative;
+    z-index: 2;
 }
 
 .cover_description-text {
@@ -148,26 +154,25 @@
 
 .bet-button {
     width: 257px;
-    height: 52px;
+    min-height: 52px;
     border: 1px solid #fff;
     background-color: transparent;
     color: #FFF;
+    font-family: inherit;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
     text-transform: uppercase;
     white-space: nowrap;
-
+    cursor: pointer;
 }
 
 
 .lots {
     width: 1340px;
-    height: 579px;
     margin-top: 180px;
     margin-left: 50px;
     margin-right: 50px;
-   
 }
 
 .lots_heading {
@@ -193,7 +198,6 @@
     min-height: 450px;
     display: flex;
     flex-grow: 1;
-    
 }
 
 .card-link {
@@ -210,6 +214,8 @@
     padding-left: 40px;
     padding-right: 40px;
     color: #FFF;
+    position: relative;
+    background-size: contain;
 }
 
 .card_title {
@@ -228,28 +234,23 @@
     font-weight: 400;
     line-height: 120%; /* 24px */
     padding-bottom: 52px;
+}
 
+.card_title, .card-text {
+    position: relative;
+    z-index: 2;
 }
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    position: relative;
-    background-size: contain;
-    z-index: -2;
 }
 
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    position: relative;
-    background-size: contain;
-    z-index: -2;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    position: relative;
-    background-size: contain;
-    z-index: -2;
 }
 
 .lots_look-more-link {
@@ -334,7 +335,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-content: start space-between;
-    margin: 180px 50px 90px 50px;
+    margin: 180px auto 90px auto;
     color: #000;
     font-size: 18px;
     font-style: normal;
